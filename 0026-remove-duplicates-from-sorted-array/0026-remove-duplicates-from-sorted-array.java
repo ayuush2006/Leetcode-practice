@@ -1,24 +1,21 @@
 class Solution {
     public int removeDuplicates(int[] arr) {
-
-        // Pehla element hamesha unique hota hai
         int i = 1;
+ //Index 0 ka kaam ho gaya.
+//Ab agla unique element index 1 par rakhenge.
+//arr = [5,5,7]
+//Index : 0 1 2
+//value : 5 5 7
+//5 pehle se index 0 par hai.
+//Ab jab 7 milega to use index 1 par rakhenge.
+        
 
-        // j array ko traverse karega
         for(int j = 1; j < arr.length; j++) {
-
-            // Agar current element previous se different hai
             if(arr[j] != arr[j - 1]) {
-
-                // Unique element ko next position par store karo
                 arr[i] = arr[j];
-
-                // Next unique element ke liye position badhao
                 i++;
             }
         }
-
-        // i = total unique elements
         return i;
     }
 }
