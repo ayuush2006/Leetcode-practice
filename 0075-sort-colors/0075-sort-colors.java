@@ -10,6 +10,6 @@ class Solution {
             if(i<NoofZeroes) arr[i] = 0;
             else if(i<NoofZeroes + NoofOnes ) arr[i] = 1;
             else arr[i] = 2;
+        }   
     }
-}
 }
