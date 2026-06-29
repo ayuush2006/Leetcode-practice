@@ -21,18 +21,18 @@
 
 // OPTIMAL SOLUTION
 class Solution {
-    public int maxProfit(int[] prices) {
+    public int maxProfit(int[] arr) {
 
-        int mini = prices[0];
+        int mini = arr[0];
         int maxProfit = 0;
 
-        for (int i = 1; i < prices.length; i++) {
+        for (int i = 1; i < arr.length; i++) {
 
-            int profit = prices[i] - mini;
+            int profit = arr[i] - mini;
 
             maxProfit = Math.max(maxProfit, profit);
 
-            mini = Math.min(mini, prices[i]);
+            mini = Math.min(mini, arr[i]);
         }
 
         return maxProfit;
