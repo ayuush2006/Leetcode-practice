@@ -1,5 +1,6 @@
 class Solution {
     public double myPow(double x, int n) {
+       // mandatory
        long power = n;
        double ans = 1.0;
 // power is neegative 
@@ -13,7 +14,7 @@ class Solution {
         power = power/2;
     }
     else {
-        ans = ans* x;
+        ans = ans * x;
         power = power - 1;
     }
    }
