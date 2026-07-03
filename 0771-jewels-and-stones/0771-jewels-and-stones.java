@@ -3,7 +3,7 @@ class Solution {
         int n = stones.length() ;
         int ans  = 0 ;
         for(int i = 0; i<n ; i++){
-            if(jewels.indexOf ((stones.charAt(i))) != -1) ans ++;
+            if(jewels.indexOf (stones.charAt(i)) != -1) ans ++;
         }
         return ans ;
     }
