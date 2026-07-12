@@ -5,7 +5,7 @@ class Solution {
         int low = 0, high = n - 1;
         boolean flag = false;
         int[] ans = {-1, -1};
-
+    // first check element is present
         while (low <= high) {
             int mid = low + (high - low) / 2;
             if (arr[mid] == target) {
@@ -35,14 +35,12 @@ class Solution {
                 low = mid + 1;
             }
         }
-
         ans[0] = lb;
 
         // Upper Bound
         low = 0;
         high = n - 1;
         int ub = n;
-
         while (low <= high) {
             int mid = low + (high - low) / 2;
 
@@ -53,9 +51,7 @@ class Solution {
                 low = mid + 1;
             }
         }
-
         ans[1] = ub - 1;   
-
         return ans;
     }
 }
