@@ -44,7 +44,7 @@ class Solution {
         while (low <= high) {
             int mid = low + (high - low) / 2;
 
-            if (arr[mid] > target) {   // >= ki jagah >
+            if (arr[mid] > target) {   
                 ub = Math.min(ub, mid);
                 high = mid - 1;
             } else {
