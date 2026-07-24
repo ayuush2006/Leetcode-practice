@@ -1,38 +1,22 @@
 
 class Solution {
-    public double findMaxAverage(int[] nums, int k) {
-
-        int n = nums.length;
-        int sum = 0;
-
-        // Step 1: First window ka sum nikalo
-        for (int i = 0; i < k; i++) {
-            sum += nums[i];
+    public double findMaxAverage(int[] arr, int k) {
+        int n = arr.length;
+        int low = 0 , high = k - 1;
+        int sum = 0 ;
+        int max = Integer.MIN_VALUE;
+        for (int i = 0 ; i <= high ; i++ ){
+            sum += arr[i] ;
         }
-
-        // Step 2: Pehli window ko answer maan lo
-        int maxSum = sum;
-
-        // Step 3: Window ke pointers set karo
-        int low = 0;
-        int high = k;
-
-        // Step 4: Window ko slide karo
-        while (high < n) {
-
-            // Left wala element hatao
-            sum -= nums[low];
-            low++;
-
-            // Right wala element add karo
-            sum += nums[high];
-            high++;
-
-            // Maximum sum update karo
-            maxSum = Math.max(maxSum, sum);
+        while (high < n){
+            max = Math.max(max, sum);
+            low ++ ;
+            high ++ ;
+             if (high == n){
+            break ;
         }
-
-        // Step 5: Average return karo
-        return (double) maxSum / k;
+        sum = sum - arr[low - 1] + arr[high];
+        }
+        return (double) max / k;
     }
 }
