@@ -4,7 +4,7 @@ class Solution {
         String ans = "";
         for (int i = arr.length - 1; i >= 0; i--) {
             ans = ans + arr[i];
-            if (i != 0) {
+             if (i != 0) {
                 ans = ans + " ";
             }
         }
