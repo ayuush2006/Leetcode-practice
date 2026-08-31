@@ -20,18 +20,46 @@
 //     }
 // }
 
+// class Solution {
+//     public int removeDuplicates(int[] arr) {
+// int n = arr.length;
+// if (n == 0) return 0;
+// int i =0 ;
+// for (int j =1  ;  j<n; j++){
+//     if (arr[i] != arr[j]) {
+//         i ++;
+//         arr[i] = arr[j];
+//     }
+// }
+
+// return i+1;
+// }
+// }
+
+
+
 class Solution {
     public int removeDuplicates(int[] arr) {
-int n = arr.length;
-if (n == 0) return 0;
-int i =0 ;
-for (int j =1  ;  j<n; j++){
-    if (arr[i] != arr[j]) {
-        i ++;
-        arr[i] = arr[j];
-    }
-}
 
-return i+1;
-}
+        int n = arr.length;
+
+        for (int i = 0; i < n - 1; i++) {
+
+            for (int j = i + 1; j < n; j++) {
+
+                if (arr[i] == arr[j]) {
+
+                    // duplicate ko remove karne ke liye
+                    for (int k = j; k < n - 1; k++) {
+                        arr[k] = arr[k + 1];
+                    }
+
+                    n--;
+                    j--;
+                }
+            }
+        }
+
+        return n;
+    }
 }
