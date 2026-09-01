@@ -13,22 +13,22 @@
 // }
 
 class Solution {
-    public void moveZeroes(int[] nums) {
+    public void moveZeroes(int[] arr) {
 
-        int[] newArr = new int[nums.length];
+        int[] newArr = new int[arr.length];
 
         int index = 0;
 
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
 
-            if (nums[i] != 0) {
-                newArr[index] = nums[i];
+            if (arr[i] != 0) {
+                newArr[index] = arr[i];
                 index++;
             }
         }
 
-        for (int i = 0; i < nums.length; i++) {
-            nums[i] = newArr[i];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = newArr[i];
         }
     }
 }
