@@ -15,17 +15,17 @@
 class Solution {
     public void moveZeroes(int[] arr) {
        //same size ka ek naya array banayenge
-        int[] newArr = new int[arr.length];
+        int[] brr = new int[arr.length];
         int index = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] != 0) {
-                newArr[index] = arr[i];
+                brr[index] = arr[i];
                 index++;
             }
         }
 
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = newArr[i];
+            arr[i] = brr[i];
         }
     }
 }
