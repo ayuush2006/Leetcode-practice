@@ -19,7 +19,7 @@ class Solution {
             }
         }
 
-        if (i == m) {
+        if (i == m) { //arr 1 poora traverse ho chuka hai
             while (j < n) {
                 c[k] = b[j];
                 j++;
@@ -27,7 +27,7 @@ class Solution {
             }
         }
 
-        if (j == n) {
+        if (j == n) { ////arr 2 poora traverse ho chuka hai
             while (i < m) {
                 c[k] = a[i];
                 i++;
