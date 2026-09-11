@@ -24,7 +24,7 @@ class Solution {
                 i++;
             }
         }
-        // brr ke elements wapas arr mein daal do
+        // brr ke elements wapas arr mein daal do : LeetCode brr ko nahi dekhega. Usko original arr ke first k elements chahiye:
         for (int j = 0; j < i; j++) {
             arr[j] = brr[j];
         }
