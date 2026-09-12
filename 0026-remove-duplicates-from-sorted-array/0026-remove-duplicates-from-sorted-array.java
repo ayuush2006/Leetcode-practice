@@ -20,21 +20,21 @@
 //     }
 // }
 
-// class Solution {
-//     public int removeDuplicates(int[] arr) {
-// int n = arr.length;
-// if (n == 0) return 0;
-// int i =0 ;
-// for (int j =1  ;  j<n; j++){
-//     if (arr[i] != arr[j]) {
-//         i ++;
-//         arr[i] = arr[j];
-//     }
-// }
+class Solution {
+    public int removeDuplicates(int[] arr) {
+int n = arr.length;
+if (n == 0) return 0;
+int i =0 ;
+for (int j =1  ;  j<n; j++){
+    if (arr[i] != arr[j]) {
+        i ++;
+        arr[i] = arr[j];
+    }
+}
 
-// return i+1;
-// }
-// }
+return i+1;
+}
+}
 
 
 
@@ -64,24 +64,24 @@
 //     }
 // }
 
-class Solution {
-    public int removeDuplicates(int[] arr) {
-        int n = arr.length;
-        int[] brr = new int[n];
-        int i = 0;
-        brr[i] = arr[i];
-        for (int j = 1; j < n; j++) {
-            if (arr[i] != arr[j]) {
-                i++;
-                arr[i] = arr[j];
-                brr[i] = arr[j];
-            }
-        }
+// class Solution {
+//     public int removeDuplicates(int[] arr) {
+//         int n = arr.length;
+//         int[] brr = new int[n];
+//         int i = 0;
+//         brr[i] = arr[i];
+//         for (int j = 1; j < n; j++) {
+//             if (arr[i] != arr[j]) {
+//                 i++;
+//                 arr[i] = arr[j];
+//                 brr[i] = arr[j];
+//             }
+//         }
 
-        for (int k = 0; k <= i; k++) {
-            arr[k] = brr[k];
-        }
+//         for (int k = 0; k <= i; k++) {
+//             arr[k] = brr[k];
+//         }
 
-        return i + 1;
-    }
-}
+//         return i + 1;
+//     }
+// }
