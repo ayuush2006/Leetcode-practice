@@ -6,18 +6,13 @@ class Solution {
 
         Arrays.sort(arr);
 
-        // first and last string
-        char[] first = arr[0].toCharArray();
-        char[] last = arr[n - 1].toCharArray();
+        for (int i = 0; i < arr[0].length() ; i++) {
 
-        // compare
-        for (int i = 0; i < first.length && i < last.length; i++) {
-
-            if (first[i] != last[i]) {
+            if (arr[0].charAt(i) != arr[n - 1].charAt(i)) {
                 break;
             }
 
-            ans += first[i];
+            ans += arr[0].charAt(i);
         }
 
         return ans;
