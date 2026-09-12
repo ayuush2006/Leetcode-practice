@@ -38,28 +38,50 @@
 
 
 
+// class Solution {
+//     public int removeDuplicates(int[] arr) {
+
+//         int n = arr.length;
+
+//         for (int i = 0; i < n - 1; i++) {
+
+//             for (int j = i + 1; j < n; j++) {
+
+//                 if (arr[i] == arr[j]) {
+
+//                     // duplicate ko remove karne ke liye
+//                     for (int k = j; k < n - 1; k++) {
+//                         arr[k] = arr[k + 1];
+//                     }
+
+//                     n--;
+//                     j--;
+//                 }
+//             }
+//         }
+
+//         return n;
+//     }
+// }
+
 class Solution {
     public int removeDuplicates(int[] arr) {
-
         int n = arr.length;
-
-        for (int i = 0; i < n - 1; i++) {
-
-            for (int j = i + 1; j < n; j++) {
-
-                if (arr[i] == arr[j]) {
-
-                    // duplicate ko remove karne ke liye
-                    for (int k = j; k < n - 1; k++) {
-                        arr[k] = arr[k + 1];
-                    }
-
-                    n--;
-                    j--;
-                }
+        int[] brr = new int[n];
+        int i = 0;
+        brr[i] = arr[i];
+        for (int j = 1; j < n; j++) {
+            if (arr[i] != arr[j]) {
+                i++;
+                arr[i] = arr[j];
+                brr[i] = arr[j];
             }
         }
 
-        return n;
+        for (int k = 0; k <= i; k++) {
+            arr[k] = brr[k];
+        }
+
+        return i + 1;
     }
 }
