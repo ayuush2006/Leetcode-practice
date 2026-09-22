@@ -12,6 +12,22 @@ class Solution {
 }
 
 
+// class Solution {
+//     public int maxSubArray(int[] arr) {
+//         int maxSum = arr[0];
+
+//         for (int i = 0; i < arr.length; i++) {
+//             int currentSum = 0;
+
+//             for (int j = i; j < arr.length; j++) {
+//                 currentSum += arr[j];
+//                 maxSum = Math.max(maxSum, currentSum);
+//             }
+//         }
+
+//         return maxSum;
+//     }
+// }
 
 
 
@@ -22,16 +38,3 @@ class Solution {
 
 
 
-
-
-        // int n = arr.length;
-        // int currsum = 0 , maxsum = Integer.MIN_VALUE;
-        // for(int i = 0; i<n; i++){
-        //     currsum += arr[i];
-        //     maxsum = Math.max(currsum, maxsum);
-        //     if (currsum <0) currsum = 0;
-        // }
-        // return maxsum;
-    //}
-    
-//}
